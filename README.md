@@ -8,7 +8,7 @@ SaltBae is a localized, privacy-first cybersecurity utility designed to generate
 
 ## 📸 Screenshots
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 
 ## 🎯 Why is this useful for Password List Generation?
