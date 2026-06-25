@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaltBae | Heuristic Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+    <header class="site-header">
+        <div class="logo"><span class="logo-accent">Salt</span>Bae</div>
+        <div class="tagline">⚠️Heuristic Password Dictionary Generator &nbsp;·&nbsp; Security Research &amp; CTF Use Only⚠️</div>
+    </header>
+
+    <form id="saltbaeForm">
+
+        <div class="form-section">
+            <div class="section-title">Identity</div>
+            <div class="input-grid">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="text" id="firstName" placeholder="e.g., Ahsan">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input type="text" id="lastName" placeholder="e.g., khan">
+                </div>
+                <div class="field">
+                    <label>Partner / Friend Name</label>
+                    <input type="text" id="partnerName" placeholder="e.g., Ali">
+                </div>
+                <div class="field">
+                    <label>Pet Name</label>
+                    <input type="text" id="petName" placeholder="e.g., kitty">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Dates &amp; Numbers</div>
+            <div class="input-grid">
+                <div class="field">
+                    <label>Birth Year</label>
+                    <input type="text" id="birthYear" placeholder="e.g., 2000">
+                </div>
+                <div class="field">
+                    <label>Important Date <span class="hint-text">(DDMM)</span></label>
+                    <input type="text" id="importantDate" placeholder="e.g., 1508">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Context</div>
+            <div class="input-grid">
+                <div class="field">
+                    <label>Company / College</label>
+                    <input type="text" id="companyCollege" placeholder="e.g., MSIT">
+                </div>
+                <div class="field">
+                    <label>Hometown / City</label>
+                    <input type="text" id="hometown" placeholder="e.g., Delhi">
+                </div>
+                <div class="field">
+                    <label>Favorite Color</label>
+                    <input type="text" id="color" placeholder="e.g., Black">
+                </div>
+                <div class="field">
+                    <label>Hobby</label>
+                    <input type="text" id="hobby" placeholder="e.g., Coding, Pentesting, Sketching">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Advanced</div>
+            <div class="input-grid">
+                <div class="field">
+                    <label>Custom Keywords &amp; Symbols <span class="hint-text">(comma separated)</span></label>
+                    <input type="text" id="commonField" placeholder="e.g., 9571, June, soc, !, security">
+                </div>
+                <div class="field">
+                    <label>Password Length Filter <span class="hint-text">(optional)</span></label>
+                    <input type="text" id="passwordLength" placeholder="e.g., 8  or  8-12  or  6-16">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn-compile">Compile Dictionary</button>
+        <div id="progressBar" class="progress-bar hidden"></div>
+
+    </form>
+
+    <div id="errorContainer" class="error-banner hidden"></div>
+
+    <div id="resultsContainer" class="results-section hidden">
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-value" id="heuristicCount">0</div>
+                <div class="stat-label">Heuristic</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="ncscCount">0</div>
+                <div class="stat-label">NCSC Common</div>
+            </div>
+            <div class="stat-card stat-total">
+                <div class="stat-value" id="totalCount">0</div>
+                <div class="stat-label">Master Total</div>
+            </div>
+        </div>
+
+        <div class="list-header">
+            <div class="list-meta">
+                Showing <strong id="countWord">0</strong> passwords &nbsp;·&nbsp; click any to copy
+            </div>
+            <button id="exportBtn" class="btn-export hidden">⬇ Export .txt</button>
+        </div>
+
+        <div class="password-grid" id="passwordList"></div>
+
+    </div> <footer class="site-footer">
+        <div class="footer-policy-box">
+            <h4 class="policy-title">⚠️ Responsible Use Policy</h4>
+            <p class="policy-text">
+                <strong>Intended Use:</strong> SaltBae is developed strictly for educational purposes, security research, and defensive risk assessment. <br>
+                <strong>Disclaimer:</strong> Any misuse of this tool to generate dictionaries for unauthorized access or malicious attacks is strictly prohibited. The developer assumes no liability for damage caused by the misuse of this software.
+            </p>
+        </div>
+
+        <div class="footer-content">
+            <p>Red Teaming <span class="accent-heart">🛠️</span> Tool</p>
+            <p class="footer-credits">Developed by <a href="https://github.com/ah74n" target="_blank" class="dev-link">Ahsan</a></p>
+        </div>
+    </footer>
+
+</div> <script src="/static/js/main.js"></script>
+</body>
+</html>
