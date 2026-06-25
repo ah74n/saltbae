@@ -334,6 +334,11 @@ git commit -m "Added new password mutation strategy"
 
 git push origin feature/new-heuristic
 ```
+## Privacy
+
+SaltBae does not store, transmit, or persist user-provided information.
+
+All password generation is performed in-memory during the request lifecycle, and user inputs are discarded once the response is returned.
 
 ## 👨‍💻 Author
 
