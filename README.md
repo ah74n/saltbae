@@ -29,9 +29,6 @@ SaltBae/
 ├── templates/
 │   └── index.html
 │
-├── image.png
-├── image-1.png
-│
 └── 100k-most-used-passwords-NCSC.txt
 ```
 ---
