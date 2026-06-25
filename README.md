@@ -25,7 +25,10 @@ SaltBae/
 ├── README.md
 │
 ├── static/
-│
+│     └──cs
+|        └──style.css
+|     └──js
+|        └──main.js
 ├── templates/
 │   └── index.html
 │
