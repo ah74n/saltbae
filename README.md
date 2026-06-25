@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Web%20Application-black?style=flat-square&logo=flask)
 ![Security](https://img.shields.io/badge/Cybersecurity-Password%20Auditing-red?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
 
 SaltBae is a privacy first password dictionary generation tool that creates highly targeted password candidates using contextual information, heuristic mutations, and real world password patterns.
 
