@@ -4,28 +4,27 @@
 ![Flask](https://img.shields.io/badge/Flask-Backend-lightgrey?style=flat-square&logo=flask)
 ![Security](https://img.shields.io/badge/Security-Red_Team%20%2F%20Blue_Team-red?style=flat-square)
 
-SaltBae is a localized, privacy-first cybersecurity utility designed to generate highly targeted password dictionaries based on personal and contextual heuristics. It simulates how an attacker might build a probability-based cracking list without creating billions of useless combinations, making it an excellent tool for defensive risk assessment and password policy auditing.
+SaltBae is a localized, privacy-first cybersecurity utility designed to generate highly targeted password dictionaries based on personal and contextual heuristics. It simulates how an attacker might build a probability-based cracking list without creating billions of useless combinations.
 
-## ⚠️ Responsible Use Policy
-**Intended Use:** This tool is developed strictly for educational purposes, security research, CTF (Capture The Flag) events, and authorized defensive risk assessment. 
-**Disclaimer:** Any misuse of this tool to generate dictionaries for unauthorized access or malicious attacks is strictly prohibited. The developer assumes no liability for damage caused by the misuse of this software.
+## 🎯 Why is this useful for Password List Generation?
+Standard, massive wordlists (like `rockyou.txt`) are great for broad attacks, but they often fail during **targeted risk assessments** or specific CTF scenarios where a user's personal context is key. 
 
----
+When people create passwords, they rarely use pure randomness. Instead, they rely on predictable patterns—combining their pet's name with a birth year, or their hometown with a special character. 
 
-## ⚡ Core Features
-
-* **Smart Tokenizer:** Automatically splits compound inputs (e.g., CamelCase, comma-separated, space-separated) into individual base words before running heuristics.
-* **11-Point Heuristic Engine:** Processes inputs across Identity, Dates, Context, and Custom variables, applying intelligent combinations (Word + Symbol + Number) rather than blind permutation.
-* **Leetspeak & Mutation Engine:** Automatically applies common Leetspeak substitutions, reverse strings, and capitalization mutations (lowercase, Capitalized, UPPERCASE).
-* **NCSC 100k Integration:** Seamlessly merges generated heuristic passwords with the National Cyber Security Centre's top 100k breached passwords to ensure base coverage.
-* **Privacy-First Architecture:** Runs entirely on your local machine (`localhost`). No PII (Personally Identifiable Information) ever leaves your environment.
-
-## 🛠️ Tech Stack
-* **Backend:** Python, Flask
-* **Frontend:** HTML5, Vanilla JavaScript, Custom CSS
-* **Data Structures:** Heavily utilizes Python `sets` for automatic O(1) deduplication during dictionary generation.
+**SaltBae solves this by:**
+1. Taking targeted OSINT data (names, hobbies, important dates, companies).
+2. Applying intelligent permutations (e.g., `Word + Symbol + Number`) instead of blind brute-force generation.
+3. Outputting a highly probable, concise `.txt` wordlist that is optimized for tools like **Hashcat** or **Hydra**, drastically reducing cracking time during audits.
 
 ## 🚀 Installation & Usage
+
+To keep your personal data secure, SaltBae is designed to be run entirely on your local machine (`localhost`). No data is sent over the internet.
+
+### Prerequisites
+* Python 3.x installed on your system.
+* Git installed.
+
+### Step-by-Step Installation
 
 1. **Clone the repository:**
    ```bash
