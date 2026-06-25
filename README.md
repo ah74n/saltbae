@@ -1,33 +1,33 @@
-#  SaltBae
-> **🚧 Work in Progress:** SaltBae is currently under active development and will be live soon!
+# SaltBae 🧂 | Heuristic Password Dictionary Generator
 
-> A Privacy-First Targeted Password Profiler and Risk Assessment Utility.
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Backend-lightgrey?style=flat-square&logo=flask)
+![Security](https://img.shields.io/badge/Security-Red_Team%20%2F%20Blue_Team-red?style=flat-square)
 
-**SaltBae** is an educational cybersecurity tool designed to demonstrate how easily passwords can be compromised when they are based on predictable personal information. By simulating a targeted custom dictionary attack (similar to tools like CUPP), SaltBae generates a customized wordlist from user inputs and tests a given password against it.
+SaltBae is a localized, privacy-first cybersecurity utility designed to generate highly targeted password dictionaries based on personal and contextual heuristics. It simulates how an attacker might build a probability-based cracking list without creating billions of useless combinations, making it an excellent tool for defensive risk assessment and password policy auditing.
 
----
-
-## 🚀 Features
-
-*   **Custom Wordlist Generation:** Takes various user inputs (names, important dates, pet names, hobbies, etc.) and uses a mutation engine to combine them into an extensive, targeted password dictionary.
-*   **Targeted Risk Analysis:** Allows users to input a test password to see if it gets caught in the generated custom wordlist. 
-*   **100% Privacy-First (Client-Side):** Security is paramount. All data collection, wordlist generation, and password testing happen entirely in the browser. **No Personally Identifiable Information (PII) or passwords ever leave your device.**
-*   **Modern UI/UX:** Built with Next.js and Tailwind CSS for a seamless, fast, and responsive user experience.
+## ⚠️ Responsible Use Policy
+**Intended Use:** This tool is developed strictly for educational purposes, security research, CTF (Capture The Flag) events, and authorized defensive risk assessment. 
+**Disclaimer:** Any misuse of this tool to generate dictionaries for unauthorized access or malicious attacks is strictly prohibited. The developer assumes no liability for damage caused by the misuse of this software.
 
 ---
 
-## 🛠️ How It Works
+## ⚡ Core Features
 
-SaltBae operates in three simple steps:
+* **Smart Tokenizer:** Automatically splits compound inputs (e.g., CamelCase, comma-separated, space-separated) into individual base words before running heuristics.
+* **11-Point Heuristic Engine:** Processes inputs across Identity, Dates, Context, and Custom variables, applying intelligent combinations (Word + Symbol + Number) rather than blind permutation.
+* **Leetspeak & Mutation Engine:** Automatically applies common Leetspeak substitutions, reverse strings, and capitalization mutations (lowercase, Capitalized, UPPERCASE).
+* **NCSC 100k Integration:** Seamlessly merges generated heuristic passwords with the National Cyber Security Centre's top 100k breached passwords to ensure base coverage.
+* **Privacy-First Architecture:** Runs entirely on your local machine (`localhost`). No PII (Personally Identifiable Information) ever leaves your environment.
 
-1.  **The Input Phase:** The user enters personal details, keywords, numbers, and significant dates into the dynamic form. 
-2.  **The Mutation Engine:** The application processes these inputs, applying common password creation patterns (combinations, reversing, appending dates, basic leetspeak) to generate a massive custom dictionary of potential passwords.
-3.  **The Test Phase:** The user inputs a password they want to test. SaltBae scans the generated dictionary to check for a match. If a match is found, the password is highly vulnerable to a targeted attack.
+## 🛠️ Tech Stack
+* **Backend:** Python, Flask
+* **Frontend:** HTML5, Vanilla JavaScript, Custom CSS
+* **Data Structures:** Heavily utilizes Python `sets` for automatic O(1) deduplication during dictionary generation.
 
----
+## 🚀 Installation & Usage
 
-
-## ⚙️ Getting Started
-
-To run this project locally on your machine, follow these steps:
-
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/ah74n/saltbae.git](https://github.com/ah74n/saltbae.git)
+   cd saltbae
