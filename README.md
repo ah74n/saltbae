@@ -9,7 +9,11 @@
 SaltBae is a privacy first password dictionary generation tool that creates highly targeted password candidates using contextual information, heuristic mutations, and real world password patterns.
 
 Unlike traditional brute force approaches that generate millions of low probability combinations, SaltBae focuses on generating passwords that users are statistically more likely to create based on personal information, naming habits, dates, and common password construction patterns.
+---
+## Live Demo
 
+🌐 https://YOUR_USERNAME.pythonanywhere.com
+---
 ---
 ## 📂 Project Structure
 
