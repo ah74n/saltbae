@@ -9,11 +9,7 @@ SaltBae is a localized, privacy-first cybersecurity utility designed to generate
 ## 📸 Screenshots
 
 ![alt text](image.png)
-![SaltBae Web Interface](image.png)
-*Fig 1: The main input interface capturing heuristic data points.*
 
-![SaltBae Generated Results](placeholder-results.png)
-*Fig 2: The generated dictionary with one-click export functionality.*
 
 ## 🎯 Why is this useful for Password List Generation?
 Standard, massive wordlists (like `rockyou.txt`) are great for broad attacks, but they often fail during **targeted risk assessments** or specific CTF scenarios where a user's personal context is key. 
